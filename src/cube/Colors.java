@@ -1,4 +1,4 @@
-package Cube;
+package cube;
 
 import java.util.HashMap;
 

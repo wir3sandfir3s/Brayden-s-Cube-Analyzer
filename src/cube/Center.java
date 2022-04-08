@@ -1,4 +1,4 @@
-package Cube;
+package cube;
 
 public class Center extends Piece {
 

@@ -1,8 +1,6 @@
-import Cube.Cube;
-
 import java.util.HashMap;
 import java.util.Scanner;
-import Cube.*;
+import cube.*;
 
 public class ConsoleApplication {
 

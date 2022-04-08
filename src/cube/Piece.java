@@ -1,4 +1,4 @@
-package Cube;
+package cube;
 
 public abstract class Piece {
 

@@ -1,10 +1,10 @@
-package Cube;
+package cube;
 
 import java.util.Arrays;
 
-public class Edge extends Piece {
+public class Corner extends Piece {
 
-    public Edge(int x, int z, int y){
+    public Corner(int x, int z, int y){
 
         super(x, z, y);
 
@@ -14,9 +14,9 @@ public class Edge extends Piece {
 
         for(int i = 0; i < 4; i++){
 
-            if(Arrays.equals(Cube.rEdgePositions[i], new int[]{this.x, this.z, this.y})){
+            if(Arrays.equals(Cube.rCornerPositions[i], new int[]{this.x, this.z, this.y})){
 
-                int[] newPos = Cube.rEdgePositions[(i + direction + 4) % 4];
+                int[] newPos = Cube.rCornerPositions[(i + direction + 4) % 4];
                 this.x = newPos[0];
                 this.z = newPos[1];
                 this.y = newPos[2];
@@ -41,9 +41,9 @@ public class Edge extends Piece {
 
         for(int i = 0; i < 4; i++){
 
-            if(Arrays.equals(Cube.uEdgePositions[i], new int[]{this.x, this.z, this.y})){
+            if(Arrays.equals(Cube.uCornerPositions[i], new int[]{this.x, this.z, this.y})){
 
-                int[] newPos = Cube.uEdgePositions[(i + direction + 4) % 4];
+                int[] newPos = Cube.uCornerPositions[(i + direction + 4) % 4];
                 this.x = newPos[0];
                 this.z = newPos[1];
                 this.y = newPos[2];
@@ -68,9 +68,9 @@ public class Edge extends Piece {
 
         for(int i = 0; i < 4; i++){
 
-            if(Arrays.equals(Cube.fEdgePositions[i], new int[]{this.x, this.z, this.y})){
+            if(Arrays.equals(Cube.fCornerPositions[i], new int[]{this.x, this.z, this.y})){
 
-                int[] newPos = Cube.fEdgePositions[(i + direction + 4) % 4];
+                int[] newPos = Cube.fCornerPositions[(i + direction + 4) % 4];
                 this.x = newPos[0];
                 this.z = newPos[1];
                 this.y = newPos[2];
@@ -95,9 +95,9 @@ public class Edge extends Piece {
 
         for(int i = 0; i < 4; i++){
 
-            if(Arrays.equals(Cube.lEdgePositions[i], new int[]{this.x, this.z, this.y})){
+            if(Arrays.equals(Cube.lCornerPositions[i], new int[]{this.x, this.z, this.y})){
 
-                int[] newPos = Cube.lEdgePositions[(i + direction + 4) % 4];
+                int[] newPos = Cube.lCornerPositions[(i + direction + 4) % 4];
                 this.x = newPos[0];
                 this.z = newPos[1];
                 this.y = newPos[2];
@@ -122,9 +122,9 @@ public class Edge extends Piece {
 
         for(int i = 0; i < 4; i++){
 
-            if(Arrays.equals(Cube.dEdgePositions[i], new int[]{this.x, this.z, this.y})){
+            if(Arrays.equals(Cube.dCornerPositions[i], new int[]{this.x, this.z, this.y})){
 
-                int[] newPos = Cube.dEdgePositions[(i + direction + 4) % 4];
+                int[] newPos = Cube.dCornerPositions[(i + direction + 4) % 4];
                 this.x = newPos[0];
                 this.z = newPos[1];
                 this.y = newPos[2];
@@ -149,9 +149,9 @@ public class Edge extends Piece {
 
         for(int i = 0; i < 4; i++){
 
-            if(Arrays.equals(Cube.bEdgePositions[i], new int[]{this.x, this.z, this.y})){
+            if(Arrays.equals(Cube.bCornerPositions[i], new int[]{this.x, this.z, this.y})){
 
-                int[] newPos = Cube.bEdgePositions[(i + direction + 4) % 4];
+                int[] newPos = Cube.bCornerPositions[(i + direction + 4) % 4];
                 this.x = newPos[0];
                 this.z = newPos[1];
                 this.y = newPos[2];
