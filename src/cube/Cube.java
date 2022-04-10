@@ -105,10 +105,16 @@ public class Cube {
         }
 
     }
-    // Get the current cube state
-    public Piece[][][] getCurrentState(){
 
-        return this.pieces;
+    private Cube(Piece[][][] state){
+
+        this.pieces = state;
+
+    }
+    // Get the current cube state
+    public Cube getCurrentState(){
+
+        return new Cube(this.pieces);
 
     }
     // Set the current cube state

@@ -189,6 +189,66 @@ public class CubeAnalyzer extends Application implements Observer<Cube, String> 
         });
         output.add(button, 5, 0);
 
+        button = new Button("R'");
+        button.setOnAction(e -> {
+            try {
+                this.cube.turn("R'");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+        output.add(button, 0, 1);
+
+        button = new Button("U'");
+        button.setOnAction(e -> {
+            try {
+                this.cube.turn("U'");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+        output.add(button, 1, 1);
+
+        button = new Button("F'");
+        button.setOnAction(e -> {
+            try {
+                this.cube.turn("F'");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+        output.add(button, 2, 1);
+
+        button = new Button("L'");
+        button.setOnAction(e -> {
+            try {
+                this.cube.turn("L'");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+        output.add(button, 3, 1);
+
+        button = new Button("D'");
+        button.setOnAction(e -> {
+            try {
+                this.cube.turn("D'");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+        output.add(button, 4, 1);
+
+        button = new Button("B'");
+        button.setOnAction(e -> {
+            try {
+                this.cube.turn("B'");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+        output.add(button, 5, 1);
+
         return output;
 
     }
@@ -204,9 +264,8 @@ public class CubeAnalyzer extends Application implements Observer<Cube, String> 
         Scene scene = new Scene(this.window);
         mainStage.setScene(scene);
         mainStage.setTitle("Brayden's Cube Analyzer");
-        mainStage.setWidth(800);
-        mainStage.setHeight(800);
-        mainStage.setResizable(false);
+        mainStage.setWidth(400);
+        mainStage.setHeight(400);
         mainStage.show();
 
     }

@@ -36,78 +36,7 @@ public class ConsoleApplication {
 
     private void displayCube(){
 
-        Piece[][][] cubeState = this.cube.getCurrentState();
-        HashMap<Character, Colors[][]> colorMap = new HashMap<>();
-        colorMap.put('R', new Colors[3][3]);
-        colorMap.put('U', new Colors[3][3]);
-        colorMap.put('F', new Colors[3][3]);
-        colorMap.put('L', new Colors[3][3]);
-        colorMap.put('D', new Colors[3][3]);
-        colorMap.put('B', new Colors[3][3]);
-
-        for(int x = 0; x < 3; x++){
-
-            for(int z = 0; z < 3; z++){
-
-                for(int y = 0; y < 3; y++){
-
-                    if(x == 1 && z == 1 && y == 1){
-
-                        continue;
-
-                    }
-
-                    Piece piece = cubeState[x][z][y];
-                    Colors[] colors = piece.getColorsMapped();
-                    Colors[][] faceMap;
-
-                    if(x == 0){
-
-                        faceMap = colorMap.get('L');
-                        faceMap[z][y] = colors[0];
-                        colorMap.put('L', faceMap);
-
-                    }else if(x == 2){
-
-                        faceMap = colorMap.get('R');
-                        faceMap[2 - z][y] = colors[0];
-                        colorMap.put('R', faceMap);
-
-                    }
-
-                    if(z == 0){
-
-                        faceMap = colorMap.get('B');
-                        faceMap[x][y] = colors[1];
-                        colorMap.put('B', faceMap);
-
-                    }else if(z == 2){
-
-                        faceMap = colorMap.get('F');
-                        faceMap[x][y] = colors[1];
-                        colorMap.put('F', faceMap);
-
-                    }
-
-                    if(y == 0){
-
-                        faceMap = colorMap.get('U');
-                        faceMap[x][z] = colors[2];
-                        colorMap.put('U', faceMap);
-
-                    }else if(y == 2){
-
-                        faceMap = colorMap.get('D');
-                        faceMap[x][2 - z] = colors[2];
-                        colorMap.put('D', faceMap);
-
-                    }
-
-                }
-
-            }
-
-        }
+        HashMap<Character, Colors[][]> colorMap = this.cube.makeColorMap();
 
         Colors[][] faceB = colorMap.get('B');
         Colors[][] faceL = colorMap.get('L');
